@@ -33,7 +33,7 @@ library
     build-depends:    Win32
   else
     cpp-options:      -DUSE_FLOCK
-    build-depends:    unix >= 2.8.0.0
+    build-depends:    unix
 
 test-suite test
   type:               exitcode-stdio-1.0
