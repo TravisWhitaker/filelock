@@ -39,7 +39,7 @@ unlock fd = closeFd fd
 
 open :: FilePath -> IO Fd
 open path = do
-  fd <- openFd path WriteOnly (Just stdFileMode) defaultFileFlags
+  fd <- openFd path WriteOnly defaultFileFlags
   -- Ideally, we would open the file descriptor with CLOEXEC enabled, but since
   -- unix 2.8 hasn't been released yet and we want backwards compatibility with
   -- older releases, we set CLOEXEC after opening the file descriptor.  This
